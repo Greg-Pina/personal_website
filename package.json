@@ -6,17 +6,11 @@
   "scripts": {
     "sass": "node-sass -w scss/ -o dist/css/ --recursive"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Greg-Pina/Greg_Pina.github.io.git"
-  },
   "author": "Greg Pina",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Greg-Pina/Greg_Pina.github.io/issues"
-  },
-  "homepage": "https://github.com/Greg-Pina/Greg_Pina.github.io#readme",
+  "homepage": "https://greg-pina.github.io/personal_website",
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "node-sass": "^4.9.3",
     "npm": "^6.4.0"
   }
