@@ -12,7 +12,7 @@
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: #fff;
+    background: set-text-color($primary-color);
     @include easeOut;
   }
 
@@ -67,7 +67,8 @@
   &-nav {
     margin: 0;
     padding: 0;
-    background: darken($primary-color, 5);
+    //background: darken($primary-color, 5);
+    background: $primary-color;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     @include easeOut;
@@ -93,7 +94,7 @@
       width: 250px;
       height: 250px;
       background: url('../img/portrait.jpg');
-      opacity: 100;
+      opacity: 100%;
       border-radius: 50%;
       border: solid 3px $secondary-color;
     }
@@ -120,7 +121,7 @@
     text-transform: uppercase;
     padding: 1rem 0;
     font-weight: 300;
-    color: #fff;
+    color: set-text-color($primary-color);
     text-decoration: none;
     @include easeOut;
 
