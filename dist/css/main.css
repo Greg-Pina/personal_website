@@ -1,3 +1,7 @@
+.resumeItems {
+  list-style-type: none;
+  margin-bottom: 20px; }
+
 .menu-btn {
   position: absolute;
   z-index: 3;
@@ -24,10 +28,11 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
+  opacity: 100%;
   visibility: hidden; }
   .menu.show {
-    visibility: visible; }
+    visibility: visible;
+    color: #040404; }
   .menu-branding, .menu-nav {
     display: flex;
     flex-flow: column wrap;
@@ -40,32 +45,32 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #444;
+    background: #111111;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: #444;
+    background: black;
     transform: translate3d(0, 100%, 0);
     transition: all 0.5s ease-out; }
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
     .menu-branding .portrait {
-      width: 250px;
-      height: 250px;
-      background: url("../img/portrait.jpg");
-      opacity: 100%;
+      margin: auto;
+      width: 230px;
+      height: 230px;
       border-radius: 50%;
-      border: solid 3px rgba(251, 255, 0, 0.959); }
+      border: solid 3px #f0f001;
+      background: url("../img/portrait.jpg"); }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.5s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: rgba(251, 255, 0, 0.959); }
+      color: #f0f001; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -77,7 +82,10 @@
     text-decoration: none;
     transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
-      color: rgba(251, 255, 0, 0.959); }
+      color: #f0f001; }
+
+.hide {
+  opacity: 0.1; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
@@ -140,7 +148,7 @@ a {
   text-decoration: none; }
 
 .text-secondary {
-  color: rgba(251, 255, 0, 0.959); }
+  color: #f0f001; }
 
 main {
   padding: 4rem;
@@ -150,7 +158,7 @@ main {
     main .icons a {
       padding: 0.4rem; }
       main .icons a:hover {
-        color: rgba(251, 255, 0, 0.959);
+        color: #f0f001;
         transition: all 0.5s ease-out; }
   main#home {
     overflow: hidden; }
@@ -164,16 +172,17 @@ main {
   grid-template-columns: repeat(3, 1fr); }
 
 .text-secondary-about {
-  color: rgba(251, 255, 0, 0.959);
+  color: #f0f001;
   font-size: 2rem; }
 
 .bio-image {
   grid-area: bioimage;
   margin: auto;
-  width: 250px;
-  height: 250px;
+  width: 230px;
+  height: 230px;
   border-radius: 50%;
-  border: solid 3px rgba(251, 255, 0, 0.959); }
+  border: solid 3px #f0f001;
+  min-height: 2vh; }
 
 .bio {
   grid-area: bio; }
@@ -190,7 +199,7 @@ main {
 .job {
   background: #515151;
   padding: 0.5rem;
-  border-bottom: rgba(251, 255, 0, 0.959) 5px solid; }
+  border-bottom: #f0f001 5px solid; }
 
 .projects {
   display: grid;
@@ -201,7 +210,7 @@ main {
     border: 3px #fff solid; }
     .projects img:hover {
       opacity: 0.5;
-      border-color: rgba(251, 255, 0, 0.959);
+      border-color: #f0f001;
       transition: all 0.5s ease-out; }
 
 .boxes {
@@ -218,7 +227,7 @@ main {
     transition: all 0.5s ease-out; }
     .boxes div:hover {
       padding: 0.5rem 1.5rem;
-      background: rgba(251, 255, 0, 0.959);
+      background: #f0f001;
       color: #000; }
       .boxes div:hover span {
         color: #000; }
@@ -229,7 +238,7 @@ main {
   border: 0;
   margin-bottom: 0.3rem; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: rgba(251, 255, 0, 0.959);
+    background: #f0f001;
     color: #000; }
 
 .btn-dark {
