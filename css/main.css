@@ -118,6 +118,14 @@
 * {
   box-sizing: border-box;
 }
+.resumeItems {
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.schoolInfo {
+  color: rgba(251, 255, 0, 0.959);
+}
 
 body {
   background: #5e5e5e;
