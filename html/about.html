@@ -1,6 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+        <!-- Google Tag Manager -->
+        <script>
+            (function(w, d, s, l, i) {
+              w[l] = w[l] || [];
+              w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+              var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+              j.async = true;
+              j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+              f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-5F22TKG');
+          </script>
+          <!-- End Google Tag Manager -->
+          <!-- Global site tag (gtag.js) - Google Analytics -->
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-134340240-1"
+          ></script>
+          <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+      
+            gtag('config', 'UA-134340240-1');
+          </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/main.css" />
@@ -15,6 +43,16 @@
   </head>
 
   <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript
+        ><iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-5F22TKG"
+          height="0"
+          width="0"
+          style="display:none;visibility:hidden"
+        ></iframe
+      ></noscript>
+      <!-- End Google Tag Manager (noscript) -->
     <div class="overlay"></div>
     <header>
       <div class="menu-btn">
@@ -25,11 +63,17 @@
 
       <nav class="menu">
         <div class="menu-branding">
-          <div class="portrait"></div>
+            <div class="about">
+                <img
+                  src="../img/portrait.jpg"
+                  alt="Greg Pina headshot"
+                  class="bio-image"
+                />
+              </div>
         </div>
         <ul class="menu-nav">
           <li class="nav-item">
-            <a href="index.html" class="nav-link">
+            <a href="../index.html" class="nav-link">
               Home
             </a>
           </li>
@@ -38,7 +82,7 @@
               About Me
             </a>
           </li>
-          <li class="nav-item">
+          <!--           <li class="nav-item">
             <a href="projects.html" class="nav-link">
               Projects
             </a>
@@ -52,7 +96,7 @@
             <a href="blog.html" class="nav-link">
               My Blog
             </a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a href="contact.html" class="nav-link">
               How To Reach Me
@@ -72,47 +116,74 @@
         Let me tell you a few things...
       </h2>
       <div class="about-info">
-        <img
-          src="../img/portrait.jpg"
-          alt="Greg Pina headshot"
-          class="bio-image"
-        />
+            <img
+              src="../img/portrait.jpg"
+              alt="Greg Pina headshot"
+              class="bio-image"
+            />
+          </div>
         <div class="bio">
           <h3 class="text-secondary-about">BIO</h3>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Accusantium, eius. Necessitatibus nihil quis tenetur reprehenderit,
-            cupiditate velit enim unde, maiores blanditiis aliquid quia nulla
-            ipsam delectus tempora, fugit nostrum ducimus.
+            Adult learner and non-traditional student. Currently enrolled at
+            Cincinnati State, studying Software Engineering. It is my plan to
+            then transfer and continue to work towards my Bachelors of Science
+            in Computer Science.
+           <div class="schoolInfo">COURSEWORK</div>Java Programming | Database Design & SQL | HTML, CSS & JavaScript | C Programming
+            <br>
+            <br>
+            <div class="schoolInfo">EXTRACURRICULARS</div>Phi Theta Kappa | Honors Club | Gamer’s Club | Society of Hispanic Professional Engineers
           </p>
+          <br>
         </div>
         <div class="job job-1">
-          <h3>123 Webshop</h3>
-          <h6>Full Stack Developer</h6>
+          <h3>InfoTrust, LLC</h3>
+          <h4>Digital Analytics Engineer Intern</h4>
+          <h5>AUGUST 2018 – PRESENT</h5>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-            magnam ipsam consectetur, porro incidunt enim amet ad sint adipisci
-            laudantium!
+            <ul>
+            <li class="resumeItems">Mastering tag management systems, tags and digital analytics on some of the largest platforms (Google Tag Manager, Google Analytics, Tealium). </li>
+            <li class="resumeItems">Troubleshooting issues with desktop
+            and mobile analytics architectures (Android SDK, TestFlight).</li>
+            <li class="resumeItems">Prototype and code solutions to integrate digital web analytics data with other data sources and Analytics Reporting APIs (SQL, BigQuery,
+            jQuery, Java). </li>
+            <li class="resumeItems">Taking ownership of client requests using various ticketing systems (Trello, JIRA).</li>
+          </ul>
           </p>
         </div>
+        <br>
+        <br>
         <div class="job job-2">
-          <h3>123 Webshop</h3>
-          <h6>Full Stack Developer</h6>
+          <h3>Procter & Gamble</h3>
+          <h4>Associate Researcher Co-Op</h4>
+          <h5>MAY 2018 – AUGUST 2018</h5>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-            magnam ipsam consectetur, porro incidunt enim amet ad sint adipisci
-            laudantium!
+            <ul>
+                <li class="resumeItems">Automated collection of laboratory reports and creating intuitive dashboards. (SQL, VBA for Excel).</li>
+                <li class="resumeItems">Tested and debugged software for prototype business project (C).</li>
+                <li class="resumeItems">Created proprietary applications for business informatics and analytical reporting into agile environment (SQL, Microsoft Power Apps, Microsoft Power BI).</li>
+                <li class="resumeItems">Developed user-interfaces for collection of external data into existing business cloud databases (SQL, Bootstrap CSS, React.JS, Node.JS, Microsoft Power BI, Microsoft Azure).</li>
+                <li class="resumeItems">Participated in extensive laboratory work for pilot of proprietary chemical engineering for Asian Market.</li>
+          </ul>
           </p>
         </div>
+        <br>
+        <br>
         <div class="job job-3">
-          <h3>123 Webshop</h3>
-          <h6>Full Stack Developer</h6>
+          <h3>Amazon NAFC</h3>
+          <h4>Certified Problem Solver</h4>
+          <h5>AUGUST 2016 – MARCH 2018</h5>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-            magnam ipsam consectetur, porro incidunt enim amet ad sint adipisci
-            laudantium!
+            <ul>
+              <li class="resumeItems">Recognized by Site Leadership for consistently delivering and exceeding deadlines and customer expectations. </li>
+              <li class="resumeItems">Enhanced the workflow of my team, enabling processing to outpace requirements and surpass 100% output.</li>
+              <li class="resumeItems" style="list-style-type: none">Facilitated successful internal and external audits through sound and thorough documentation.</li>
+              <li class="resumeItems">Reconciled vendor statements and handled discrepancies with a high level of accuracy.</li>
+              </ul>
           </p>
         </div>
+        <br>
+        <br>
       </div>
     </main>
     <footer id="main-footer">
