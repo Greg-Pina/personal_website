@@ -5,6 +5,8 @@ const menu = document.querySelector('.menu');
 const menuNav = document.querySelector('.menu-nav');
 const menuBranding = document.querySelector('.menu-branding');
 const navItems = document.querySelectorAll('.nav-item');
+const resumeBtn = document.querySelector('.resume-btn');
+const resumeContent = document.querySelector('.resume-content');
 
 // Set Initial State Of Menu
 let showMenu = false;
@@ -32,3 +34,69 @@ function toggleMenu() {
     showMenu = false;
   }
 }
+/*
+// Set Initial State of Resume Button
+let showResume = false;
+resumeBtn.addEventListener('click', toggleResume);
+
+function toggleResume() {
+  if (!showResume) {
+    resumeBtn.classList.add('close');
+    resumeContent.classList.add('show');
+    showResume = true;
+  } else {
+    resumeBtn.classList.remove('close');
+    resumeContent.classList.remove('show');
+
+    showResume = false;
+  }
+}
+*/
+/*
+// Lets Build out the resume
+const url = '../docs/GregPinaResume.pdf';
+
+let pdfDoc = null,
+  pageNum = 1,
+  pageIsRendering = false,
+  pageNumIsPending = null;
+
+const scale = 1.5,
+  canvas = document.querySelector('.resume-content'),
+  ctx = canvas.getContext('2d');
+
+// Render the page
+const renderPage = num => {
+  pageIsRendering = true;
+
+  // Get the page
+  pdfDoc.getPage(num).then(page => {
+    // Set scale
+    const viewport = page.getViewport({ scale });
+    canvas.height = viewport.height;
+    canvas.width = viewport.width;
+
+    const renderCtx = {
+      canvasContext: ctx,
+      viewport
+    };
+
+    page.render(renderCtx).promse.then(() => {
+      pageIsRendering = false;
+
+      if (pageNumIsPending !== null) {
+        renderPage(pageNumIsPending);
+
+        pageNumIsPending = null;
+      }
+    });
+  });
+};
+
+// Get Document
+pdfjsLib.getDocument(url).promise.then(pdfDoc_ => {
+  pdfDoc = pdfDoc_;
+
+  renderPage(pageNum);
+});
+*/
