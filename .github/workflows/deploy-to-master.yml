@@ -1,0 +1,68 @@
+name: Deploy gh-pages to master
+
+on:
+  push:
+    branches:
+      - gh-pages
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: deploy-to-master
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout gh-pages
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          fetch-depth: 0
+
+      # =========================
+      # OPTIONAL BUILD STEP
+      # If you add bundling/minifying later, do it here
+      # =========================
+      # - uses: actions/setup-node@v4
+      #   with:
+      #     node-version: 20
+      # - run: npm ci
+      # - run: npm run build
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Deploy to master
+        run: |
+          set -e
+
+          # Copy working tree except .git
+          mkdir /tmp/deploy
+          rsync -a --delete \
+            --exclude ".git" \
+            --exclude ".github" \
+            ./ /tmp/deploy/
+
+          # Switch to master
+          git fetch origin master
+          git checkout master
+
+          # Replace master contents
+          rsync -a --delete /tmp/deploy/ ./
+
+          # Commit only if changed
+          if git diff --quiet; then
+            echo "No changes to deploy."
+            exit 0
+          fi
+
+          git add -A
+          git commit -m "Deploy from gh-pages (${GITHUB_SHA})"
+          git push origin HEAD:master
