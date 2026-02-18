@@ -1,65 +1,38 @@
-name: Deploy gh-pages to master
+name: Deploy Gatsby to GitHub Pages
 
 on:
   push:
-    branches: [gh-pages]
+    branches: [master, main]
   workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  group: deploy-to-master
+  group: deploy-to-gh-pages
   cancel-in-progress: true
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout gh-pages (source)
+      - name: Checkout source
         uses: actions/checkout@v4
+
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
         with:
-          ref: gh-pages
-          path: src
-          fetch-depth: 0
+          node-version: 20
+          cache: npm
 
-      - name: Checkout master (destination)
-        uses: actions/checkout@v4
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Gatsby site
+        run: npm run build
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          ref: master
-          path: dest
-          fetch-depth: 0
-
-      # OPTIONAL: put build steps here, operating inside src/
-      # Example:
-      # - uses: actions/setup-node@v4
-      #   with: { node-version: 20 }
-      # - working-directory: src
-      #   run: npm ci
-      # - working-directory: src
-      #   run: npm run build
-      #
-      # If you build to src/dist, then rsync src/dist/ -> dest/
-
-      - name: Deploy src -> master
-        run: |
-          set -e
-
-          # Copy source into destination (but do NOT delete dest/.git)
-          rsync -a --delete \
-            --exclude ".git" \
-            --exclude ".github" \
-            src/ dest/
-
-          cd dest
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com]"
-
-          if git diff --quiet; then
-            echo "No changes to deploy."
-            exit 0
-          fi
-
-          git add -A
-          git commit -m "Deploy from gh-pages (${GITHUB_SHA})"
-          git push origin HEAD:master
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
