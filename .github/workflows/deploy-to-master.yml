@@ -2,8 +2,7 @@ name: Deploy gh-pages to master
 
 on:
   push:
-    branches:
-      - gh-pages
+    branches: [gh-pages]
   workflow_dispatch:
 
 permissions:
@@ -16,48 +15,46 @@ concurrency:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout gh-pages
+      - name: Checkout gh-pages (source)
         uses: actions/checkout@v4
         with:
           ref: gh-pages
+          path: src
           fetch-depth: 0
 
-      # =========================
-      # OPTIONAL BUILD STEP
-      # If you add bundling/minifying later, do it here
-      # =========================
+      - name: Checkout master (destination)
+        uses: actions/checkout@v4
+        with:
+          ref: master
+          path: dest
+          fetch-depth: 0
+
+      # OPTIONAL: put build steps here, operating inside src/
+      # Example:
       # - uses: actions/setup-node@v4
-      #   with:
-      #     node-version: 20
-      # - run: npm ci
-      # - run: npm run build
+      #   with: { node-version: 20 }
+      # - working-directory: src
+      #   run: npm ci
+      # - working-directory: src
+      #   run: npm run build
+      #
+      # If you build to src/dist, then rsync src/dist/ -> dest/
 
-      - name: Configure git
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
-      - name: Deploy to master
+      - name: Deploy src -> master
         run: |
           set -e
 
-          # Copy working tree except .git
-          mkdir /tmp/deploy
+          # Copy source into destination (but do NOT delete dest/.git)
           rsync -a --delete \
             --exclude ".git" \
             --exclude ".github" \
-            ./ /tmp/deploy/
+            src/ dest/
 
-          # Switch to master
-          git fetch origin master
-          git checkout master
+          cd dest
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com]"
 
-          # Replace master contents
-          rsync -a --delete /tmp/deploy/ ./
-
-          # Commit only if changed
           if git diff --quiet; then
             echo "No changes to deploy."
             exit 0
