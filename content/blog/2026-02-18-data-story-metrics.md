@@ -3,6 +3,7 @@ title: "Data story: turning metrics into decisions"
 date: "2026-02-18"
 description: "A short framework for connecting metrics to real decisions."
 slug: "/blog/data-story-metrics/"
+tags: ["analytics", "metrics", "decision-making"]
 ---
 
 When a dashboard is busy but decisions are still slow, the missing piece is often a clear decision loop. A useful structure is:

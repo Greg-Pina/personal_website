@@ -77,6 +77,15 @@ module.exports = {
       }
     },
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap"
-  ]
+    "gatsby-plugin-sitemap",
+    process.env.GOOGLE_ANALYTICS_ID && {
+      resolve: "gatsby-plugin-google-gtag",
+      options: {
+        trackingIds: [process.env.GOOGLE_ANALYTICS_ID],
+        pluginConfig: {
+          head: true
+        }
+      }
+    }
+  ].filter(Boolean)
 };

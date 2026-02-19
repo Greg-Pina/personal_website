@@ -3,6 +3,7 @@ title: "Building a portfolio with Gatsby"
 date: "2026-02-18"
 description: "Why Gatsby is a friendly entry point for a React-based portfolio."
 slug: "/blog/portfolio-with-gatsby/"
+tags: ["gatsby", "portfolio", "react", "web-development"]
 ---
 
 Gatsby is a solid first React framework because it is static-first, easy to host, and still gives you the component model you will use everywhere else.

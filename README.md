@@ -47,3 +47,58 @@ The resume is served from `/docs/greg_pina_resume.pdf`. Update the file in `stat
 - Projects: [src/data/projects.json](src/data/projects.json)
 - Videos (YouTube IDs + blog links): [src/data/videos.json](src/data/videos.json)
 - Blog posts: [content/blog](content/blog)
+## Blog Management
+
+### Creating a new post
+
+Blog posts use Markdown with frontmatter. Create a new file in `content/blog/` with the format:
+
+```
+YYYY-MM-DD-post-title.md
+```
+
+Example frontmatter:
+
+```markdown
+---
+title: "Your Post Title"
+date: "2026-02-20"
+description: "A short description for the blog listing."
+slug: "/blog/your-post-slug/"
+tags: ["tag1", "tag2", "renewables"]
+---
+
+Your post content here...
+```
+
+### Features
+
+- **Tags**: Add multiple tags to organize posts by topic. Tags are displayed as hashtags (#tag)
+- **Read Time**: Automatically calculated based on word count (225 words/minute)
+- **Tag Pages**: Users can browse posts by tag at `/blog/tags/` and filter on the main blog page
+- **Social Sharing**: LinkedIn share button on each post (more platforms can be added)
+- **RSS Feed**: Blog posts are automatically included in `/rss.xml`
+
+### Tag System
+
+- Tags help organize posts and enable filtering
+- View all tags at `/blog/tags/`
+- Each tag has its own page showing related posts
+- Add relevant tags to new posts (e.g., #analytics, #data, #engineering)
+
+### Google Analytics
+
+To track blog post views and visitor analytics:
+
+1. Create a Google Analytics 4 property if you don't have one
+2. Get your **Measurement ID** (format: `G-XXXXXXXXXX`)
+3. Create a `.env.local` file in the project root:
+
+```
+GOOGLE_ANALYTICS_ID=G-XXXXXXXXXX
+```
+
+4. Run `npm run develop` or rebuild with `npm run build`
+5. View analytics at https://analytics.google.com
+
+**Note**: Analytics are only tracked in production builds. Use the `.env.example` as a template.
