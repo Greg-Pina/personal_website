@@ -20,6 +20,13 @@ npm run serve
 
 The GitHub Actions workflow builds the site and publishes the `public/` output to the `gh-pages` branch.
 
+## Linting & formatting
+
+```bash
+npm run lint
+npm run format
+```
+
 ## Resume
 
 The resume is served from `/docs/greg_pina_resume.pdf`. Update the file in `static/docs/` to change the deployed resume.
