@@ -9,14 +9,13 @@ const AboutPage = () => (
       <h2>About</h2>
       <div className="about-highlight">
         <p>
-          Adult learner and non-traditional student currently working as a Senior
-          Software Engineer at GEICO while completing an MS in Management and
-          Leadership at WGU. I focus on analytics platforms, experimentation, and
-          data products that help teams make reliable decisions.
+          Senior Software Engineer with a passion for analytics, data, and building solutions that drive business impact. Experienced in leading cross-team initiatives, mentoring, and delivering data-driven insights to optimize product decisions. Skilled in a range of technologies including Google Analytics, SQL, Node, React, and Azure cloud services.
         </p>
         <p>
-          Earlier coursework includes Software Engineering studies at Cincinnati
-          State, with a plan to continue toward a BS in Computer Science.
+          Experience includes the insurance, healthcare, and e-commerce industries, with a track record of improving site performance, driving applicant growth, and leading successful migrations. Committed to continuous learning and sharing knowledge through writing and mentorship.
+        </p>
+        <p>
+          All opinions are my own and do not reflect those of my employer.
         </p>
       </div>
     </section>
@@ -34,15 +33,15 @@ const AboutPage = () => (
           <tbody>
             <tr>
               <td>Software</td>
-              <td>Java Programming, C Programming, HTML/CSS/JavaScript</td>
+              <td>Java Programming, C Programming, Machine Learning DevOps, Scripting and Programming Applications</td>
             </tr>
             <tr>
               <td>Data</td>
-              <td>Database Design & SQL, Data Wrangling, Data Visualization</td>
+              <td>Data Structures & Algorithms, Database Design & SQL, Data and Information Governance, Data Visualization</td>
             </tr>
             <tr>
               <td>Analytics</td>
-              <td>Data Analysis with R, Data Structures & Algorithms</td>
+              <td>Data Analysis with R, Introduction to Systems Thinking, Discrete Mathemtics</td>
             </tr>
           </tbody>
         </table>
@@ -61,24 +60,24 @@ const AboutPage = () => (
           </thead>
           <tbody>
             <tr>
-              <td>Analytics</td>
-              <td>Google Analytics, Adobe Analytics, experimentation, data visualization</td>
+              <td>Languages</td>
+              <td>Java , JavaScript , SQL , Python , R , Scala , Go , SCADA , PLC/DCS</td>
             </tr>
             <tr>
-              <td>Data</td>
-              <td>SQL, BigQuery, data wrangling, dashboards</td>
+              <td>Frameworks</td>
+              <td>Node , React , dbt , Selenium , Pandas , NumPy , Ansible , YAML , Redis</td>
             </tr>
             <tr>
-              <td>Engineering</td>
-              <td>Node, React, APIs, tag management, automation</td>
+              <td>ETL</td>
+              <td>dbt , Airflow , Hadoop , Kafka , SSIS , Airbyte , Fivetran , Dagster , Databricks , Spark</td>
+            </tr>
+            <tr>
+              <td>DevOps</td>
+              <td>Git , Trello , JIRA , SDLC , Agile , Kanban , Azure DevOps , Version1 , Docker , Kubernetes</td>
             </tr>
             <tr>
               <td>Cloud</td>
-              <td>Azure Functions, Cosmos DB, Power BI</td>
-            </tr>
-            <tr>
-              <td>Leadership</td>
-              <td>Cross-team collaboration, mentoring, documentation, stakeholder alignment</td>
+              <td>Azure Event Hub, Cosmos DB, Data Factory , AWS Glue, EC2, EBS , Google Big Query, Looker Studio</td>
             </tr>
           </tbody>
         </table>
