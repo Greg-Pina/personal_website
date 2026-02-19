@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Greg Pina Blog RSS Feed]]></title><description><![CDATA[Portfolio, projects, and notes on engineering and analytics.]]></description><link>http://github.com/dylang/node-rss</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 19 Feb 2026 00:01:50 GMT</lastBuildDate><item><title><![CDATA[Analytics engineering: practical workflow]]></title><description><![CDATA[A simple workflow for reliable analytics without over-engineering.]]></description><link>https://greg-pina.github.io/personal_website/blog/analytics-engineering-workflow/</link><guid isPermaLink="false">https://greg-pina.github.io/personal_website/blog/analytics-engineering-workflow/</guid><pubDate>Wed, 18 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;A dependable analytics workflow is built on three loops:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Instrument&lt;/strong&gt;: agree on event names, ownership, and validation.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Model&lt;/strong&gt;: create a canonical dataset that business users trust.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Decide&lt;/strong&gt;: make outcomes visible with a short summary and next step.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you keep the loop tight, stakeholders stay aligned and the data keeps its value.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Data story: turning metrics into decisions]]></title><description><![CDATA[A short framework for connecting metrics to real decisions.]]></description><link>https://greg-pina.github.io/personal_website/blog/data-story-metrics/</link><guid isPermaLink="false">https://greg-pina.github.io/personal_website/blog/data-story-metrics/</guid><pubDate>Wed, 18 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;When a dashboard is busy but decisions are still slow, the missing piece is often a clear decision loop. A useful structure is:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Signal&lt;/strong&gt;: define the metric that tells you something changed.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Diagnosis&lt;/strong&gt;: identify what likely caused the change.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Action&lt;/strong&gt;: list the choices that are now on the table.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cost&lt;/strong&gt;: what does it cost to be wrong?&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Decision&lt;/strong&gt;: what will you do, and when?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This keeps analysis focused on action and prevents endless metric churn.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Building a portfolio with Gatsby]]></title><description><![CDATA[Why Gatsby is a friendly entry point for a React-based portfolio.]]></description><link>https://greg-pina.github.io/personal_website/blog/portfolio-with-gatsby/</link><guid isPermaLink="false">https://greg-pina.github.io/personal_website/blog/portfolio-with-gatsby/</guid><pubDate>Wed, 18 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Gatsby is a solid first React framework because it is static-first, easy to host, and still gives you the component model you will use everywhere else.&lt;/p&gt;
+&lt;p&gt;My focus for this build was:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A clean content structure with Markdown for posts.&lt;/li&gt;
+&lt;li&gt;A working RSS feed.&lt;/li&gt;
+&lt;li&gt;Lightweight data files for projects and videos.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Once content is stable, the same structure can move to Next.js later with minimal disruption.&lt;/p&gt;</content:encoded></item></channel></rss>
